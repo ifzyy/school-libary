@@ -1,67 +1,42 @@
-# Ruby Course
+# School libary
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
 
-## Set-up Rubocop GitHub Action
+## Built With
 
-[Rubocop](https://www.rubocop.org/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
+- Ruby
 
-This GitHub Action is going to run [Rubocop](https://docs.rubocop.org/en/stable/) to help you find style issues.
 
-Please do the following **steps in this order**:
+## Getting Started
 
-1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
-    - **Remember** to use the file linked above
-    - **Remember** that `.github` folder starts with a dot.
-2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-3. When you open your first pull request you should see the result of the GitHub Actions:
+**To get a local copy up clone the repo or download the full souce code**
 
-![gh actions checks](../assets/images/gh-actions-rubocop-linters-checks.png)
+- Clone the repository by running git clone https://github.com/ifzyy/school-libary.git
+- Navigate to the folder cd school-libary
 
-Click on the `Details` link to see the full output and the errors that need to be fixed:
+## Author
 
-![gh actions failing checks](../assets/images/gh-actions-rubocop-failing-checks.png)
+👤 **Johnson**
 
-## [OPTIONAL]Set-up RSpec GitHub Action
+- GitHub: [@Johnson](https://github.com/ifzyy)
+- Twitter: [@Johsnon](https://twitter.com/JohnsnEmmanuel)
+- LinkedIn: [Johnson](https://linkedin.com/in/johnson-emmanuel)
 
-You can run your tests with GitHub Actions to ensure that they are passing before merging a PR.
+## 🤝 Contributing
 
-To use the GitHub Action to run your tests, please do the following **steps in this order**:
+Contributions, issues, and feature requests are welcome!
 
-1. Add a copy of [`.github/workflows/tests.yml`](.github/workflows/tests.yml) to your `.github/workflows` folder.
-    - **Remember** to use the file linked above
-    - Do not modify or delete the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) file that should already be in that folder.
-    - RSpec by default will try to run any file ending in `_spec.rb` inside the `spec` folder. Make sure to follow this convention for your tests files so `rspec` can run your spec files.
-    - You can modify the [`.github/workflows/tests.yml`](.github/workflows/tests.yml) file to better fit your custom needs.
-3. When you open your pull request you should see the result of the GitHub Action:
+Feel free to check the [issues page](https://github.com/yayner2002/my-enumerable/issues).
 
-![gh actions checks](../assets/images/gh-actions-rspec-tests-checks.png)
+## Show your support
 
-Click on the `Details` link of the test action to check the results of your tests.
+Give a ⭐️ if you like this project!
 
-## Set-up linters in your local env
+## Acknowledgments
 
-### [RuboCop](https://docs.rubocop.org/en/stable/)
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
-1. Add this line to the `Gemfile`
-    ```
-    gem 'rubocop', '>= 1.0', '< 2.0'
-    ```
-    *not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html).*
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-4. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-5. Run `rubocop`.
-6. Fix linter errors.
-7. **IMPORTANT NOTE**: feel free to research [auto-correct options for Rubocop](https://rubocop.readthedocs.io/en/latest/auto_correct/) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+## 📝 License
 
-## Troubleshooting
-
-- While using Colorize gem, if you are facing errors with Rspec related to 
-    ```bash
-    LoadError:
-    cannot load such file -- colorize
-    ```
-    please remove ```--deployment``` from line no. [26](https://github.com/shubham14p3/Ruby-capstone-project/blob/ca86784cc88bea7c933e329c0953f07e21bcf6ca/.github/workflows/tests.yml#L16) of test.yml file.
+This project is [MIT](./LICENSE) licensed.
