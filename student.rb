@@ -6,11 +6,12 @@ class Student < Person
   def initialize
     super(age, name, parent_permission)
     @classroom = classroom
-    add_to_class(classroom)
+    add_classroom(classroom)
   end
 
-  def add_student(classroom)
-    classroom.add_student(self)
+   def add_classroom=(classroom)
+    @classroom = classroom
+    classroom.students.push(self) unless classroom.students.include?(self)
   end
 
   def play_hooky
