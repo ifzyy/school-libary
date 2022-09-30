@@ -1,42 +1,53 @@
-# School libary
+# School_Library_OOP
 
+This is simple console app built with Ruby using Object Oriented Programming (OOP) principles.
 
 ## Built With
 
-- Ruby
+- **Languages**
 
+  - *Ruby*
 
-## Getting Started
+### Prerequisites
 
-**To get a local copy up clone the repo or download the full souce code**
+It has a working git on your local machine.
 
-- Clone the repository by running git clone https://github.com/ifzyy/school-libary.git
-- Navigate to the folder cd school-libary
+## Setup
 
-## Author
+## 🛠 Installation & Set Up
 
-👤 **Johnson**
+To get a working local copy up and running follow these simple steps
 
-- GitHub: [@Johnson](https://github.com/ifzyy)
-- Twitter: [@Johsnon](https://twitter.com/JohnsnEmmanuel)
-- LinkedIn: [Johnson](https://linkedin.com/in/johnson-emmanuel)
+- Open terminal
+- Clone this project with the command:
+
+```
+git clone https://github.com/principlebrothers/School_Library_OOP.git
+
+```
+
+### Usage
+
+For anyone that whats to learn ruby
+
+## Authors
+
+👤 **Ernest Anyewe Adonu**
+
+- GitHub: [@principlebrothers](https://github.com/principlebrothers)
+- Twitter: [@adonu_ernest](https://twitter.com/adonu_ernest)
+- LinkedIn: [Ernest Anyewe Adonu](www.linkedin.com/in/ernest-anyewe-adonu)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/yayner2002/my-enumerable/issues).
+Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
