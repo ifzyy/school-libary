@@ -1,8 +1,6 @@
 require_relative 'nameable'
 
 class BaseDecorator < Nameable
-  attr_accessor :nameable
-
   def initialize(nameable)
     super()
     @nameable = nameable
@@ -15,7 +13,7 @@ end
 
 class CapitalizeDecorator < BaseDecorator
   def correct_name
-    @nameable.correct_name.capitalize
+    @nameable.correct_name.strip.capitalize
   end
 end
 
