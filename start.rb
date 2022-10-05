@@ -6,7 +6,7 @@ class StartApp
     @option = 0
   end
 
-    def menu_options
+  def menu_options
     puts ' '
     puts ' *** WELCOME TO THE GATE SCHOOL LIBRARY APP! *** '
     puts '-------------------------------------------------'
