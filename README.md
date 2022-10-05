@@ -1,10 +1,8 @@
 # School libary
 
-
 ## Built With
 
 - Ruby
-
 
 ## Getting Started
 
@@ -20,6 +18,12 @@
 - GitHub: [@Johnson](https://github.com/ifzyy)
 - Twitter: [@Johsnon](https://twitter.com/JohnsnEmmanuel)
 - LinkedIn: [Johnson](https://linkedin.com/in/johnson-emmanuel)
+
+👤 **rotshidzwa**
+
+- GitHub: [@rotshidzw](https://github.com/rotshidzw)
+- Twitter: [@rotshidzwamavh1](https://twitter.com/rotshidzwamavh1)
+- LinkedIn: [Rochidzwa Chester](https://www.linkedin.com/in/rochidzwa-chester-8062b6211/)
 
 ## 🤝 Contributing
 
