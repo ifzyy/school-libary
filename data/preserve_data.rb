@@ -8,15 +8,10 @@ require_relative '../teacher'
 
 require 'json'
 
-
-
 def load_books
-
   if File.exist?('./data/books.json')
 
     file = File.open('./data/books.json')
-
-
 
     if file.size.zero?
 
@@ -26,14 +21,10 @@ def load_books
 
       books = JSON.parse(File.read('./data/books.json'))
 
-
-
       books.each do |book|
-
         book = Book.new(book['title'], book['author'])
 
         @books << book
-
       end
 
     end
@@ -49,13 +40,9 @@ def load_books
   p 'Available books:'
 
   @books.each { |b| p "Book title: #{b.title}, Author: #{b.author}" } unless @books.empty?
-
 end
 
-
-
 def save_book(title, author)
-
   obj = {
 
     title: title,
@@ -64,13 +51,9 @@ def save_book(title, author)
 
   }
 
-
-
   if File.exist?('./data/books.json')
 
     file = File.open('./data/books.json')
-
-
 
     if file.size.zero?
 
@@ -84,11 +67,7 @@ def save_book(title, author)
 
     end
 
-
-
     file.close
-
-
 
     myfile = File.open('./data/books.json', 'w')
 
@@ -97,13 +76,9 @@ def save_book(title, author)
     myfile.close
 
   end
-
 end
 
-
-
 def load_people
-
   if File.exist?('./data/people.json')
 
     file = File.open('./data/people.json')
@@ -117,7 +92,6 @@ def load_people
       people = JSON.parse(File.read('./data/people.json'))
 
       people.each do |person|
-
         if person['option'] == 'Student'
 
           student = Student.new(person['age'], person['name'])
@@ -131,7 +105,6 @@ def load_people
           @people << teacher
 
         end
-
       end
 
     end
@@ -143,13 +116,9 @@ def load_people
     p 'Please insert  data'
 
   end
-
 end
 
-
-
 def save_student(name, age, parent_permission)
-
   obj = {
 
     type: 'Student',
@@ -162,13 +131,9 @@ def save_student(name, age, parent_permission)
 
   }
 
-
-
   if File.exist?('./data/people.json')
 
     file = File.open('./data/people.json')
-
-
 
     if file.size.zero?
 
@@ -182,11 +147,7 @@ def save_student(name, age, parent_permission)
 
     end
 
-
-
     file.close
-
-
 
     myfile = File.open('./data/people.json', 'w')
 
@@ -195,13 +156,9 @@ def save_student(name, age, parent_permission)
     myfile.close
 
   end
-
 end
 
-
-
 def save_teacher(name, age, specialization)
-
   obj = {
 
     type: 'Teacher',
@@ -216,13 +173,9 @@ def save_teacher(name, age, specialization)
 
   }
 
-
-
   if File.exist?('./data/people.json')
 
     file = File.open('./data/people.json')
-
-
 
     if file.size.zero?
 
@@ -236,11 +189,7 @@ def save_teacher(name, age, specialization)
 
     end
 
-
-
     file.close
-
-
 
     myfile = File.open('./data/people.json', 'w')
 
@@ -249,18 +198,12 @@ def save_teacher(name, age, specialization)
     myfile.close
 
   end
-
 end
 
-
-
 def load_rentals
-
   if File.exist?('./data/rentals.json')
 
     file = File.open('./data/rentals.json')
-
-
 
     if file.size.zero?
 
@@ -273,9 +216,7 @@ def load_rentals
       p 'Reserved books: '
 
       rentals.each do |rental|
-
         p "Name: #{rental['person']}, Book: #{rental['book']} on: #{rental['date']}"
-
       end
 
     end
@@ -287,13 +228,9 @@ def load_rentals
     p 'No reservations found, please reseve  books first'
 
   end
-
 end
 
-
-
 def save_rental(date, book, person)
-
   obj = {
 
     date: date,
@@ -304,13 +241,9 @@ def save_rental(date, book, person)
 
   }
 
-
-
   if File.exist?('./data/rentals.json')
 
     file = File.open('./data/rentals.json')
-
-
 
     if file.size.zero?
 
@@ -324,11 +257,7 @@ def save_rental(date, book, person)
 
     end
 
-
-
     file.close
-
-
 
     myfile = File.open('./data/rentals.json', 'w')
 
@@ -337,6 +266,4 @@ def save_rental(date, book, person)
     myfile.close
 
   end
-
 end
-

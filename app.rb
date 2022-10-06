@@ -130,7 +130,6 @@ class App
 
       date = Date.today
 
-      
       @rentals << Rental.new(date, @books[book_index], @people[person_index])
       save_rental(date, @books[rental_book], @people[rental_person])
       puts '*** Rental created successfully ***'
