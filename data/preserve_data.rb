@@ -58,7 +58,6 @@ def save_book(title, author)
   if file.size.zero?
 
     book = [obj]
-
   else
 
     book = JSON.parse(File.read('./data/books.json'))
