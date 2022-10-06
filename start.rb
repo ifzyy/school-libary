@@ -3,6 +3,7 @@ require_relative 'app'
 class StartApp
   def initialize
     @app = App.new
+    @app.load_data
     @option = 0
   end
 

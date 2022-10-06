@@ -5,6 +5,7 @@ require_relative 'student'
 require_relative 'teacher'
 require_relative 'classroom'
 require 'date'
+require_relative './data/preserve_data'
 
 class App
   attr_reader :books, :people, :rentals
@@ -13,6 +14,14 @@ class App
     @books = []
     @people = []
     @rentals = []
+  end
+
+  def load_data
+    load_people
+    puts
+    load_books
+    puts
+    load_rentals
   end
 
   # list all books
@@ -69,6 +78,7 @@ class App
     classroom = Classroom.new(classroom_label)
 
     @people << Student.new(classroom, age, name, parent_permission: parent_permission)
+    save_student(name, age, parent_permission)
     puts '*** Student created successfully ***'
   end
 
@@ -84,6 +94,7 @@ class App
     specialization = gets.chomp
 
     @people << Teacher.new(specialization, age, name)
+    save_teacher(name, age, specialization)
     puts '*** Person created successfully ***'
   end
 
@@ -96,6 +107,7 @@ class App
     author = gets.chomp
 
     @books << Book.new(title, author)
+    save_book(title, author)
     puts '*** Book created successfully ***'
   end
 
@@ -118,7 +130,9 @@ class App
 
       date = Date.today
 
+      
       @rentals << Rental.new(date, @books[book_index], @people[person_index])
+      save_rental(date, @books[rental_book], @people[rental_person])
       puts '*** Rental created successfully ***'
     else
       puts 'There are no books or persons to create a rental'
