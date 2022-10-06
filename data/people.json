@@ -10,5 +10,20 @@
         "name": "Johnson",
         "age": 22,
         "parent_permission":"no"
+    },
+    {
+        "type": "student",
+        "name": "mavhungu",
+        "age": 23,
+        "parent_permission":true
+    },
+    {
+        "type": "Teacher",
+        "name": "emmanuel",
+        "age": 22,
+        "parent_permission":true
     }
+
+
+
 ]

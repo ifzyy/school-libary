@@ -1,9 +1,10 @@
 require_relative 'person'
 
 class Teacher < Person
-  def initialize(specialization, age, name = 'Unknown')
+  attr_accessor :specialization
+
+  def initialize(_specialization, age, name = 'Unknown')
     super(age, name)
-    @specialization = specialization
   end
 
   def can_use_services?
