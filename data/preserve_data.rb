@@ -66,7 +66,6 @@ def save_book(title, author)
 
   end
 
-
   file.close
 
   myfile = File.open('./data/books.json', 'w')
@@ -74,7 +73,6 @@ def save_book(title, author)
   myfile.write(JSON.pretty_generate(book))
 
   myfile.close
-
 end
 
 def load_people
@@ -130,13 +128,11 @@ def save_student(name, age, parent_permission)
 
   }
 
-
   return unless File.exist?('./data/people.json')
 
   file = File.open('./data/people.json')
 
   if file.size.zero?
-
 
     student = [obj]
 
@@ -148,16 +144,13 @@ def save_student(name, age, parent_permission)
 
   end
 
-
   file.close
 
   myfile = File.open('./data/people.json', 'w')
 
-
   myfile.write(JSON.pretty_generate(student))
 
   myfile.close
-
 end
 
 def save_teacher(name, age, specialization)
@@ -191,7 +184,6 @@ def save_teacher(name, age, specialization)
 
   end
 
-
   file.close
 
   myfile = File.open('./data/people.json', 'w')
@@ -199,7 +191,6 @@ def save_teacher(name, age, specialization)
   myfile.write(JSON.pretty_generate(teacher))
 
   myfile.close
-
 end
 
 def load_rentals
@@ -266,5 +257,4 @@ def save_rental(date, book, person)
   myfile.write(JSON.pretty_generate(rental))
 
   myfile.close
-
 end
