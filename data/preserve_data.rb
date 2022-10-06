@@ -235,29 +235,27 @@ def save_rental(date, book, person)
 
   }
 
-  if File.exist?('./data/rentals.json')
+  return unless File.exist?('./data/rentals.json')
 
-    file = File.open('./data/rentals.json')
+  file = File.open('./data/rentals.json')
 
-    if file.size.zero?
+  if file.size.zero?
 
-      rental = [obj]
+    rental = [obj]
 
-    else
+  else
 
-      rental = JSON.parse(File.read('./data/rentals.json'))
+    rental = JSON.parse(File.read('./data/rentals.json'))
 
-      rental << obj
-
-    end
-
-    file.close
-
-    myfile = File.open('./data/rentals.json', 'w')
-
-    myfile.write(JSON.pretty_generate(rental))
-
-    myfile.close
+    rental << obj
 
   end
+
+  file.close
+
+  myfile = File.open('./data/rentals.json', 'w')
+
+  myfile.write(JSON.pretty_generate(rental))
+
+  myfile.close
 end
