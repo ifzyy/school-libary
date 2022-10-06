@@ -1,6 +1,14 @@
 [
-    {
-        "title":"chester",
-        "type":"rc mavhungu"
-    }
+  {
+    "title": "chester",
+    "author": "rc mavhungu"
+  },
+  {
+    "title": "johnson",
+    "author": "donatello"
+  },
+  {
+    "title": "the last son",
+    "author": "Dominic"
+  }
 ]
